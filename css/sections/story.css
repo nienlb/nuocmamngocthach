@@ -1,0 +1,87 @@
+#story {
+  padding: var(--space-xl) 0;
+  background: var(--color-bg);
+}
+.story__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Image card với viền biển */
+.story__image { position: relative; }
+.story__img-placeholder {
+  aspect-ratio: 4/5;
+  background: linear-gradient(145deg, #C8920A, #8B4513);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.story__img-placeholder .img-icon { font-size: 6rem; opacity: .6; }
+.story__img-placeholder .img-label {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: .05em;
+}
+
+/* Badge nổi góc */
+.story__image-badge {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+.story__image-badge strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1;
+}
+.story__image-badge span { font-size: 0.72rem; opacity: .85; }
+
+.story__text h2 { margin: var(--space-xs) 0 var(--space-sm); }
+.story__text p { margin-bottom: 1rem; }
+.story__stats {
+  display: flex;
+  gap: 0;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 2px solid var(--color-bg-alt);
+}
+.story__stat {
+  flex: 1;
+  padding-right: 1.5rem;
+  border-right: 1px solid var(--color-bg-alt);
+}
+.story__stat:last-child { border-right: none; padding-right: 0; padding-left: 1.5rem; }
+.story__stat:first-child { padding-left: 0; }
+.story__stat strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  line-height: 1;
+}
+.story__stat em {
+  font-style: normal;
+  font-size: 1rem;
+  color: var(--color-amber);
+}
+.story__stat span { font-size: 0.78rem; color: var(--color-text-muted); display: block; margin-top: 0.2rem; }
+
+@media (max-width: 900px) {
+  .story__inner { grid-template-columns: 1fr; gap: 3rem; }
+  .story__image-badge { bottom: 1rem; right: 1rem; }
+}

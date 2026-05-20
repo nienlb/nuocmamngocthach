@@ -1,0 +1,103 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+:root {
+  /* ── Palette Ngọc Thạch: đỏ truyền thống + vàng nghệ ── */
+  --color-primary:    #B5241A;   /* đỏ truyền thống — màu nhãn chai */
+  --color-secondary:  #C8820A;   /* vàng nghệ — nền banner */
+  --color-accent:     #E8A820;   /* vàng sáng — highlight */
+  --color-dark:       #5C1209;   /* đỏ đậm — footer, dark section */
+  --color-amber:      #8B4513;   /* hổ phách — màu nước mắm */
+
+  --color-bg:         #FFFAF4;   /* kem ấm */
+  --color-bg-alt:     #FDF0DC;   /* vàng nhạt */
+  --color-bg-sand:    #FAF0E0;   /* cát ấm */
+  --color-text:       #2A1208;   /* nâu đen */
+  --color-text-muted: #7A4A35;   /* nâu ấm */
+  --color-white:      #FFFFFF;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body:    'Inter', sans-serif;
+
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  2rem;
+  --space-lg:  4rem;
+  --space-xl:  7rem;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --shadow-sm: 0 2px 8px rgba(90,18,9,.08);
+  --shadow-md: 0 8px 32px rgba(90,18,9,.12);
+  --shadow-lg: 0 20px 60px rgba(90,18,9,.18);
+
+  --transition: 0.25s ease;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.65;
+}
+h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
+h3 { font-size: 1.2rem; }
+p  { color: var(--color-text-muted); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+.btn--primary:hover { background: var(--color-dark); }
+.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+.btn--secondary:hover { background: #A56D08; }
+.btn--ghost {
+  background: transparent;
+  color: var(--color-white);
+  border-color: rgba(255,255,255,.5);
+}
+.btn--ghost:hover { border-color: var(--color-white); background: rgba(255,255,255,.12); }
+.btn--outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn--outline:hover { background: var(--color-primary); color: var(--color-white); }
+.btn--lg { padding: 1rem 2.25rem; font-size: 1rem; }
+.btn--full { width: 100%; justify-content: center; }
+
+.section__eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+.section__header { text-align: center; margin-bottom: var(--space-lg); }
+.section__header h2 { margin-top: var(--space-xs); color: var(--color-text); }
+.section__header p { max-width: 520px; margin: 0.75rem auto 0; }

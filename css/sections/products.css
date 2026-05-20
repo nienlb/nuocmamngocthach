@@ -1,0 +1,92 @@
+#products {
+  padding: var(--space-xl) 0;
+  background: var(--color-bg);
+}
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.product-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1.5px solid transparent;
+  transition: var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(181,36,26,.15);
+}
+.product-card__badge {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  z-index: 1;
+}
+.product-card__badge--new { background: #1D7A4A; }
+
+/* Ảnh sản phẩm — tone nâu hổ phách như chai nước mắm thật */
+.product-card__img {
+  background: linear-gradient(145deg, #8B4513 0%, #C8820A 60%, #E8A820 100%);
+  padding: 2.5rem;
+  text-align: center;
+  font-size: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+/* Hiệu ứng ánh sáng trên chai */
+.product-card__img::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 20%; right: 20%; bottom: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,.15), transparent);
+  pointer-events: none;
+}
+
+.product-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.4rem;
+}
+.product-card__body h3 { color: var(--color-text); }
+.product-card__meta {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary) !important;
+  letter-spacing: .03em;
+}
+.product-card__body p { font-size: 0.88rem; flex: 1; line-height: 1.6; }
+.product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-bg-alt);
+}
+.product-card__price {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+.product-card__footer .btn { padding: 0.55rem 1.1rem; font-size: 0.82rem; }
+
+@media (max-width: 768px) {
+  .products__grid { grid-template-columns: 1fr; max-width: 380px; margin-inline: auto; }
+}
