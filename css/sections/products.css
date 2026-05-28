@@ -1,6 +1,6 @@
 #products {
   padding: var(--space-xl) 0;
-  background: var(--color-bg);
+  background: linear-gradient(180deg, var(--color-bg-warm) 0%, var(--color-bg) 100%);
 }
 .products__grid {
   display: grid;
@@ -18,10 +18,17 @@
   display: flex;
   flex-direction: column;
 }
+.product-card::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
+  flex-shrink: 0;
+}
 .product-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(181,36,26,.15);
+  border-color: rgba(200,32,15,.18);
 }
 .product-card__badge {
   position: absolute;
@@ -38,9 +45,9 @@
 }
 .product-card__badge--new { background: #1D7A4A; }
 
-/* Ảnh sản phẩm — tone nâu hổ phách như chai nước mắm thật */
+/* Ảnh sản phẩm — tone hổ phách rực như màu nước mắm nhĩ */
 .product-card__img {
-  background: linear-gradient(145deg, #8B4513 0%, #C8820A 60%, #E8A820 100%);
+  background: linear-gradient(145deg, #A01E10 0%, #CC8008 58%, #F0B818 100%);
   padding: 2.5rem;
   text-align: center;
   font-size: 5rem;

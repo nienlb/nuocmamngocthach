@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "brand": "Nước Mắm Ngọc Thạch",
+    "location": "Phú Thủy · Phan Thiết · Bình Thuận",
+    "usage": "Chỉnh sửa tại đây, rồi chạy: node scripts/generate-tokens.js"
+  },
+  "colors": {
+    "primary":    { "value": "#C8200F", "note": "đỏ tươi rực — màu nhãn chai, heading, CTA" },
+    "secondary":  { "value": "#D98C08", "note": "vàng nghệ rực — nền banner, button" },
+    "accent":     { "value": "#F5BC18", "note": "vàng sáng rỡ — highlight, sao, badge" },
+    "dark":       { "value": "#5C1008", "note": "đỏ đậm sâu — footer, nền tối" },
+    "amber":      { "value": "#A85820", "note": "hổ phách đậm — màu nước mắm" },
+    "ocean":      { "value": "#1A6080", "note": "xanh biển — logo thương hiệu" },
+    "saffron":    { "value": "#F0A020", "note": "nghệ vàng ấm — điểm nhấn trung gian" },
+    "bg":         { "value": "#FFFCF5", "note": "kem sáng — nền trang chính" },
+    "bg-alt":     { "value": "#FEF0D0", "note": "vàng nhạt rực — nền section phụ" },
+    "bg-sand":    { "value": "#FDF5E8", "note": "cát ấm sáng — nền process" },
+    "bg-warm":    { "value": "#FFF6E8", "note": "kem vàng ấm — nền products" },
+    "text":       { "value": "#2A1208", "note": "nâu đen — body text" },
+    "text-muted": { "value": "#7A4A35", "note": "nâu ấm — caption, phụ" },
+    "white":      { "value": "#FFFFFF", "note": "trắng" }
+  },
+  "typography": {
+    "font-heading": { "value": "'Playfair Display', serif", "note": "Google Fonts — serif trang trọng" },
+    "font-body":    { "value": "'Inter', sans-serif",        "note": "Google Fonts — sans-serif sáng sủa" }
+  },
+  "spacing": {
+    "xs": { "value": "0.5rem" },
+    "sm": { "value": "1rem" },
+    "md": { "value": "2rem" },
+    "lg": { "value": "4rem" },
+    "xl": { "value": "7rem" }
+  },
+  "radius": {
+    "sm": { "value": "8px" },
+    "md": { "value": "16px" },
+    "lg": { "value": "24px" }
+  },
+  "shadow": {
+    "sm": { "value": "0 2px 8px rgba(160,20,10,.10)" },
+    "md": { "value": "0 8px 32px rgba(160,20,10,.15)" },
+    "lg": { "value": "0 20px 60px rgba(160,20,10,.22)" }
+  },
+  "transition": {
+    "value": "0.25s ease"
+  }
+}

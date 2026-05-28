@@ -1,6 +1,6 @@
 #story {
   padding: var(--space-xl) 0;
-  background: var(--color-bg);
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
 }
 .story__inner {
   display: grid;
@@ -13,7 +13,7 @@
 .story__image { position: relative; }
 .story__img-placeholder {
   aspect-ratio: 4/5;
-  background: linear-gradient(145deg, #C8920A, #8B4513);
+  background: linear-gradient(145deg, #A01E10 0%, #C88008 55%, #F0B818 100%);
   border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
@@ -22,13 +22,22 @@
   gap: 1rem;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  position: relative;
 }
-.story__img-placeholder .img-icon { font-size: 6rem; opacity: .6; }
+.story__img-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 30%, rgba(255,255,255,.18) 0%, transparent 60%);
+}
+.story__img-placeholder .img-icon { font-size: 6rem; opacity: .75; position: relative; }
 .story__img-placeholder .img-label {
   font-size: 0.8rem;
-  color: var(--color-primary);
+  color: rgba(255,255,255,.85);
   font-weight: 600;
   letter-spacing: .05em;
+  position: relative;
+  text-shadow: 0 1px 4px rgba(0,0,0,.3);
 }
 
 /* Badge nổi góc */
@@ -36,12 +45,12 @@
   position: absolute;
   bottom: -1rem;
   right: -1rem;
-  background: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   color: #fff;
   border-radius: var(--radius-md);
   padding: 1.25rem 1.5rem;
   text-align: center;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md), 0 0 30px rgba(200,32,15,.25);
 }
 .story__image-badge strong {
   display: block;
@@ -73,11 +82,12 @@
   font-size: 2.2rem;
   color: var(--color-primary);
   line-height: 1;
+  text-shadow: 0 1px 0 rgba(200,32,15,.12);
 }
 .story__stat em {
   font-style: normal;
   font-size: 1rem;
-  color: var(--color-amber);
+  color: var(--color-saffron);
 }
 .story__stat span { font-size: 0.78rem; color: var(--color-text-muted); display: block; margin-top: 0.2rem; }
 

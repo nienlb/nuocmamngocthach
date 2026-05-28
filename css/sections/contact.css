@@ -1,6 +1,6 @@
 #contact {
   padding: var(--space-xl) 0;
-  background: var(--color-bg-alt);
+  background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg-warm) 100%);
 }
 .contact__inner {
   display: grid;
@@ -22,13 +22,14 @@
 .contact__list-item:last-child { border-bottom: none; }
 .contact__list-icon {
   width: 36px; height: 36px;
-  background: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(200,32,15,.25);
 }
 .contact__list-text strong {
   display: block;
@@ -44,7 +45,7 @@
 .contact__map {
   margin-top: var(--space-md);
   height: 160px;
-  background: linear-gradient(145deg, #C8920A22, #8B451322);
+  background: linear-gradient(145deg, rgba(217,140,8,.14), rgba(168,88,32,.14));
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -52,8 +53,8 @@
   gap: 0.5rem;
   font-size: 0.85rem;
   color: var(--color-primary);
-  font-weight: 500;
-  border: 2px dashed rgba(181,36,26,.2);
+  font-weight: 600;
+  border: 2px dashed rgba(200,32,15,.25);
 }
 
 .contact__form {
@@ -89,7 +90,7 @@
   outline: none;
   border-color: var(--color-primary);
   background: var(--color-white);
-  box-shadow: 0 0 0 3px rgba(181,36,26,.08);
+  box-shadow: 0 0 0 3px rgba(200,32,15,.12);
 }
 
 @media (max-width: 900px) {

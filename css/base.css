@@ -1,39 +1,51 @@
+/* ================================================================
+   css/base.css
+   AUTO-GENERATED từ design-tokens.json — đừng edit file này trực tiếp.
+   Thay đổi design-tokens.json rồi chạy: python3 scripts/generate-tokens.py
+   ================================================================ */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
 :root {
-  /* ── Palette Ngọc Thạch: đỏ truyền thống + vàng nghệ ── */
-  --color-primary:    #B5241A;   /* đỏ truyền thống — màu nhãn chai */
-  --color-secondary:  #C8820A;   /* vàng nghệ — nền banner */
-  --color-accent:     #E8A820;   /* vàng sáng — highlight */
-  --color-dark:       #5C1209;   /* đỏ đậm — footer, dark section */
-  --color-amber:      #8B4513;   /* hổ phách — màu nước mắm */
+  /* ── Màu sắc — Nước Mắm Ngọc Thạch ── */
+  --color-primary: #C8200F;   /* đỏ tươi rực — màu nhãn chai, heading, CTA */
+  --color-secondary: #D98C08;   /* vàng nghệ rực — nền banner, button */
+  --color-accent: #F5BC18;   /* vàng sáng rỡ — highlight, sao, badge */
+  --color-dark: #5C1008;   /* đỏ đậm sâu — footer, nền tối */
+  --color-amber: #A85820;   /* hổ phách đậm — màu nước mắm */
+  --color-ocean: #1A6080;   /* xanh biển — logo thương hiệu */
+  --color-saffron: #F0A020;   /* nghệ vàng ấm — điểm nhấn trung gian */
+  --color-bg: #FFFCF5;   /* kem sáng — nền trang chính */
+  --color-bg-alt: #FEF0D0;   /* vàng nhạt rực — nền section phụ */
+  --color-bg-sand: #FDF5E8;   /* cát ấm sáng — nền process */
+  --color-bg-warm: #FFF6E8;   /* kem vàng ấm — nền products */
+  --color-text: #2A1208;   /* nâu đen — body text */
+  --color-text-muted: #7A4A35;   /* nâu ấm — caption, phụ */
+  --color-white: #FFFFFF;   /* trắng */
 
-  --color-bg:         #FFFAF4;   /* kem ấm */
-  --color-bg-alt:     #FDF0DC;   /* vàng nhạt */
-  --color-bg-sand:    #FAF0E0;   /* cát ấm */
-  --color-text:       #2A1208;   /* nâu đen */
-  --color-text-muted: #7A4A35;   /* nâu ấm */
-  --color-white:      #FFFFFF;
+  /* ── Typography ── */
+  --font-heading: 'Playfair Display', serif;   /* Google Fonts — serif trang trọng */
+  --font-body: 'Inter', sans-serif;   /* Google Fonts — sans-serif sáng sủa */
 
-  --font-heading: 'Playfair Display', serif;
-  --font-body:    'Inter', sans-serif;
+  /* ── Spacing ── */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 7rem;
 
-  --space-xs:  0.5rem;
-  --space-sm:  1rem;
-  --space-md:  2rem;
-  --space-lg:  4rem;
-  --space-xl:  7rem;
-
+  /* ── Radius ── */
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
 
-  --shadow-sm: 0 2px 8px rgba(90,18,9,.08);
-  --shadow-md: 0 8px 32px rgba(90,18,9,.12);
-  --shadow-lg: 0 20px 60px rgba(90,18,9,.18);
+  /* ── Shadow ── */
+  --shadow-sm: 0 2px 8px rgba(160,20,10,.10);
+  --shadow-md: 0 8px 32px rgba(160,20,10,.15);
+  --shadow-lg: 0 20px 60px rgba(160,20,10,.22);
 
   --transition: 0.25s ease;
 }
@@ -65,16 +77,10 @@ p  { color: var(--color-text-muted); }
   transition: var(--transition);
   white-space: nowrap;
 }
-.btn--primary {
-  background: var(--color-primary);
-  color: var(--color-white);
-}
+.btn--primary   { background: var(--color-primary);   color: var(--color-white); }
 .btn--primary:hover { background: var(--color-dark); }
-.btn--secondary {
-  background: var(--color-secondary);
-  color: var(--color-white);
-}
-.btn--secondary:hover { background: #A56D08; }
+.btn--secondary { background: var(--color-secondary); color: var(--color-white); }
+.btn--secondary:hover { background: var(--color-amber); }
 .btn--ghost {
   background: transparent;
   color: var(--color-white);
@@ -87,7 +93,7 @@ p  { color: var(--color-text-muted); }
   border-color: var(--color-primary);
 }
 .btn--outline:hover { background: var(--color-primary); color: var(--color-white); }
-.btn--lg { padding: 1rem 2.25rem; font-size: 1rem; }
+.btn--lg   { padding: 1rem 2.25rem; font-size: 1rem; }
 .btn--full { width: 100%; justify-content: center; }
 
 .section__eyebrow {
@@ -100,4 +106,4 @@ p  { color: var(--color-text-muted); }
 }
 .section__header { text-align: center; margin-bottom: var(--space-lg); }
 .section__header h2 { margin-top: var(--space-xs); color: var(--color-text); }
-.section__header p { max-width: 520px; margin: 0.75rem auto 0; }
+.section__header p  { max-width: 520px; margin: 0.75rem auto 0; }

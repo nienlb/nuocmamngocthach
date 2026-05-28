@@ -6,17 +6,17 @@
   overflow: hidden;
 }
 
-/* Nền: vàng nghệ truyền thống → đỏ đậm */
+/* Nền: đỏ rực truyền thống → vàng nghệ ấm */
 .hero__bg {
   position: absolute;
   inset: 0;
   background:
     linear-gradient(160deg,
-      rgba(92,18,9,.92) 0%,
-      rgba(139,69,19,.80) 50%,
-      rgba(200,130,10,.65) 100%
+      rgba(155,18,10,.96) 0%,
+      rgba(195,75,8,.86) 45%,
+      rgba(215,140,10,.72) 100%
     );
-  background-color: #5C1209;
+  background-color: #5C1008;
 }
 
 /* Họa tiết sóng nước truyền thống */
@@ -37,15 +37,16 @@
     );
 }
 
-/* Ánh nắng từ góc trên phải */
+/* Ánh nắng rực từ góc trên phải */
 .hero__bg::after {
   content: '';
   position: absolute;
   right: 5%;
   top: -10%;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(232,168,32,.22) 0%, transparent 60%);
+  width: 750px;
+  height: 750px;
+  background:
+    radial-gradient(circle, rgba(245,188,24,.32) 0%, rgba(220,140,10,.15) 40%, transparent 65%);
   pointer-events: none;
 }
 
@@ -91,8 +92,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(232,168,32,.15);
-  border: 1px solid rgba(232,168,32,.35);
+  background: rgba(245,188,24,.18);
+  border: 1px solid rgba(245,188,24,.50);
   color: var(--color-accent);
   font-size: 0.78rem;
   font-weight: 700;
@@ -101,6 +102,7 @@
   padding: 0.4rem 1rem;
   border-radius: 100px;
   margin-bottom: var(--space-sm);
+  box-shadow: 0 0 20px rgba(245,188,24,.12);
 }
 .hero__title {
   color: var(--color-white);
@@ -120,7 +122,11 @@
 .hero__cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 .hero__cta .btn--secondary {
   background: var(--color-secondary);
-  box-shadow: 0 4px 20px rgba(200,130,10,.4);
+  box-shadow: 0 4px 24px rgba(217,140,8,.55);
+}
+.hero__cta .btn--secondary:hover {
+  background: var(--color-saffron);
+  box-shadow: 0 6px 32px rgba(240,160,32,.60);
 }
 
 .hero__trust {
