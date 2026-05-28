@@ -1,7 +1,7 @@
 {
   "meta": {
     "brand": "Nước Mắm Ngọc Thạch",
-    "location": "Phú Thủy · Phan Thiết · Bình Thuận",
+    "location": "Thanh Hải · Phan Thiết · Bình Thuận",
     "usage": "Chỉnh sửa tại đây, rồi chạy: node scripts/generate-tokens.js"
   },
   "colors": {
